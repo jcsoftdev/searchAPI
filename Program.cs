@@ -7,7 +7,7 @@ using System.Web;
 namespace Program
 {   
     class Google{
-        public int GetResults(string busqueda, string KEY, string EngineID){
+        public long GetResults(string busqueda, string KEY, string EngineID){
             string urlGoogle = "https://www.googleapis.com/customsearch/v1?key="+KEY+"&cx="+EngineID+"&q="+busqueda;
                
             var jsonGoogle = new WebClient().DownloadString(urlGoogle);
@@ -15,7 +15,7 @@ namespace Program
             dynamic resGoogle = JsonConvert.DeserializeObject(jsonGoogle);
             
             // Recorrer el obejto del request de Google
-            int resultsQuantity = 0;
+            long resultsQuantity = 0;
             foreach (var google in resGoogle.queries.request)
             {
                 
@@ -30,7 +30,7 @@ namespace Program
         }
     }
     class Bing{
-        public int GetResults(string busqueda, string KEY, string EngineID){
+        public long GetResults(string busqueda, string KEY, string EngineID){
             string urlBing = "https://www.googleapis.com/customsearch/v1?key="+KEY+"&cx="+EngineID+"&q="+busqueda;
                
             var jsonBing = new WebClient().DownloadString(urlBing);
@@ -38,7 +38,7 @@ namespace Program
             dynamic resBing = JsonConvert.DeserializeObject(jsonBing);
             
             // Recorrer el obejto del request de Bing
-            int resultsQuantity = 0;
+            long resultsQuantity = 0;
             foreach (var bing in resBing.queries.request)
             {
                 resultsQuantity = bing.totalResults;
@@ -51,8 +51,8 @@ namespace Program
     {
         static void Main(string[] args)
         {
-            int iBing = 0;
-            int iGoogle = 0;
+            long iBing = 0;
+            long iGoogle = 0;
             string KEY = "AIzaSyAJuxgY1dQGQV45L1nIOoxLjJd7Cy-xA1M";
             string EngineIdG = "010556043604774410724:xvljiggke1i";
             string EngineIdB = "010556043604774410724:fzoekgp3pmq";
@@ -62,8 +62,8 @@ namespace Program
             foreach (string argumento in args)
             {
                 
-                int resultsGoogle = searchGoogle.GetResults(argumento, KEY, EngineIdG);
-                int resultsBing = searchBing.GetResults(argumento, KEY, EngineIdB);
+                long resultsGoogle = searchGoogle.GetResults(argumento, KEY, EngineIdG);
+                long resultsBing = searchBing.GetResults(argumento, KEY, EngineIdB);
                 if (resultsGoogle>resultsBing)
                 {
                     iGoogle++;
