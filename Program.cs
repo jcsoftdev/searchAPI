@@ -86,7 +86,9 @@ namespace Program
 
         }
         
-        static async void BingShare(string busqueda)
+        // this function isn't  use
+        // it's just a demo for Microsoft's API
+        static async void BingSearch(string busqueda)
         {
             var client = new HttpClient();
             var queryString = HttpUtility.ParseQueryString(string.Empty);
