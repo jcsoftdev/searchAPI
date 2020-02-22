@@ -5,7 +5,48 @@ using System.Net.Http;
 using System.Web;
 
 namespace Program
-{
+{   
+    class Google{
+        public int GetResults(string busqueda, string KEY, string EngineID){
+            string urlGoogle = "https://www.googleapis.com/customsearch/v1?key="+KEY+"&cx="+EngineID+"&q="+busqueda;
+               
+            var jsonGoogle = new WebClient().DownloadString(urlGoogle);
+            // Convitiendo el string a objects
+            dynamic resGoogle = JsonConvert.DeserializeObject(jsonGoogle);
+            
+            // Recorrer el obejto del request de Google
+            int resultsQuantity = 0;
+            foreach (var google in resGoogle.queries.request)
+            {
+                
+                    // Console.WriteLine("__________________________________________________");
+                    // Console.WriteLine("");
+                    // Console.WriteLine("{0}: Google => {1}", busqueda ,google.totalResults);
+                    resultsQuantity = google.totalResults;
+                
+            }
+            Console.WriteLine("{0}: Google => {1}",busqueda, resultsQuantity);
+            return resultsQuantity;
+        }
+    }
+    class Bing{
+        public int GetResults(string busqueda, string KEY, string EngineID){
+            string urlBing = "https://www.googleapis.com/customsearch/v1?key="+KEY+"&cx="+EngineID+"&q="+busqueda;
+               
+            var jsonBing = new WebClient().DownloadString(urlBing);
+            // Convitiendo el string a objects
+            dynamic resBing = JsonConvert.DeserializeObject(jsonBing);
+            
+            // Recorrer el obejto del request de Bing
+            int resultsQuantity = 0;
+            foreach (var bing in resBing.queries.request)
+            {
+                resultsQuantity = bing.totalResults;
+            }
+            Console.WriteLine("{0}: Bing   => {1}",busqueda, resultsQuantity);
+            return resultsQuantity;
+        }
+    }
     static class Program
     {
         static void Main(string[] args)
@@ -13,42 +54,26 @@ namespace Program
             int iBing = 0;
             int iGoogle = 0;
             string KEY = "AIzaSyAJuxgY1dQGQV45L1nIOoxLjJd7Cy-xA1M";
+            string EngineIdG = "010556043604774410724:xvljiggke1i";
+            string EngineIdB = "010556043604774410724:fzoekgp3pmq";
+            var searchGoogle = new Google();
+            var searchBing = new Bing();
+            Console.WriteLine("__________________________________________________");
             foreach (string argumento in args)
             {
-                // Los links de cosnultas
-                string urlGoogle = "https://www.googleapis.com/customsearch/v1?key="+KEY+"&cx=010556043604774410724:xvljiggke1i&q="+argumento;
-                string urlBing = "https://www.googleapis.com/customsearch/v1?key="+KEY+"&cx=010556043604774410724:fzoekgp3pmq&q="+argumento;
-                // Realizando la peticion de links
-                var jsonGoogle = new WebClient().DownloadString(urlGoogle);
-                var jsonBing = new WebClient().DownloadString(urlGoogle);
-                // Convitiendo el string a objects
-                dynamic resGoogle = JsonConvert.DeserializeObject(jsonGoogle);
-                dynamic resBing = JsonConvert.DeserializeObject(jsonBing);
                 
-                // Recorrer el obejto del request de Google
-                foreach (var google in resGoogle.queries.request)
+                int resultsGoogle = searchGoogle.GetResults(argumento, KEY, EngineIdG);
+                int resultsBing = searchBing.GetResults(argumento, KEY, EngineIdB);
+                if (resultsGoogle>resultsBing)
                 {
-                    // Recorrer el obejto del request de Bing
-                    foreach (var bing in resBing.queries.request)
-                    {
-                        Console.WriteLine("__________________________________________________");
-                        Console.WriteLine("");
-                        Console.WriteLine("{0}: Google => {1}, Bing => {2}", argumento ,google.totalResults, bing.totalResults);
-                        if (google.totalResults > bing.totalResults)
-                        {
-                            Console.WriteLine("Google Winner: {0}", argumento);
-                            iGoogle ++;
-                        }else
-                        {
-                            Console.WriteLine("Bing Winner: {0}", argumento);
-                            iBing ++;
-                        }
-                        
-                    }
+                    iGoogle++;
+                }else if (resultsGoogle<resultsBing)
+                {
+                    iBing++;
                 }
                 
             }
-            Console.WriteLine("__________________________________________________");
+            Console.WriteLine("============================");
             if (iBing>iGoogle)
             {
                 Console.WriteLine("Bing winner");
@@ -57,7 +82,7 @@ namespace Program
             }else{
                 Console.WriteLine("Obtubieron un empate");
             }
-            Console.WriteLine("======================");
+            Console.WriteLine("============================");
 
         }
         
@@ -68,7 +93,6 @@ namespace Program
 
             // Request headers
             client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "714ebc5f53934dbf896c514dbf3db2cd");
-
             // Request parameters
             queryString["q"] = busqueda;
             queryString["count"] = "10";
