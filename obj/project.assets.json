@@ -57,9 +57,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ajcar\\Desktop\\searchAPI\\SearchEngine.csproj",
-      "projectName": "SearchEngine",
-      "projectPath": "C:\\Users\\ajcar\\Desktop\\searchAPI\\SearchEngine.csproj",
+      "projectUniqueName": "C:\\Users\\ajcar\\Desktop\\searchAPI\\SearchAPI.csproj",
+      "projectName": "SearchAPI",
+      "projectPath": "C:\\Users\\ajcar\\Desktop\\searchAPI\\SearchAPI.csproj",
       "packagesPath": "C:\\Users\\ajcar\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\ajcar\\Desktop\\searchAPI\\obj\\",
       "projectStyle": "PackageReference",

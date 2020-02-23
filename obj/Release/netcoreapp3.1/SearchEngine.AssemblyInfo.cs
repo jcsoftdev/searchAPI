@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("SearchEngine")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("SearchAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("SearchEngine")]
-[assembly: System.Reflection.AssemblyTitleAttribute("SearchEngine")]
+[assembly: System.Reflection.AssemblyProductAttribute("SearchAPI")]
+[assembly: System.Reflection.AssemblyTitleAttribute("SearchAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Generado por la clase WriteCodeFragment de MSBuild.
