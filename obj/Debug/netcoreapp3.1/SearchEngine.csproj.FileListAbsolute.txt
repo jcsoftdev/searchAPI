@@ -11,3 +11,16 @@ C:\Users\ajcar\Desktop\SearchEngine\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\ajcar\Desktop\SearchEngine\obj\Debug\netcoreapp3.1\SearchEngine.csproj.CopyComplete
 C:\Users\ajcar\Desktop\SearchEngine\obj\Debug\netcoreapp3.1\SearchEngine.dll
 C:\Users\ajcar\Desktop\SearchEngine\obj\Debug\netcoreapp3.1\SearchEngine.pdb
+C:\Users\ajcar\Desktop\searchAPI\bin\Debug\netcoreapp3.1\SearchEngine.exe
+C:\Users\ajcar\Desktop\searchAPI\bin\Debug\netcoreapp3.1\SearchEngine.deps.json
+C:\Users\ajcar\Desktop\searchAPI\bin\Debug\netcoreapp3.1\SearchEngine.runtimeconfig.json
+C:\Users\ajcar\Desktop\searchAPI\bin\Debug\netcoreapp3.1\SearchEngine.runtimeconfig.dev.json
+C:\Users\ajcar\Desktop\searchAPI\bin\Debug\netcoreapp3.1\SearchEngine.dll
+C:\Users\ajcar\Desktop\searchAPI\bin\Debug\netcoreapp3.1\SearchEngine.pdb
+C:\Users\ajcar\Desktop\searchAPI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\ajcar\Desktop\searchAPI\obj\Debug\netcoreapp3.1\SearchEngine.csprojAssemblyReference.cache
+C:\Users\ajcar\Desktop\searchAPI\obj\Debug\netcoreapp3.1\SearchEngine.AssemblyInfoInputs.cache
+C:\Users\ajcar\Desktop\searchAPI\obj\Debug\netcoreapp3.1\SearchEngine.AssemblyInfo.cs
+C:\Users\ajcar\Desktop\searchAPI\obj\Debug\netcoreapp3.1\SearchEngine.csproj.CopyComplete
+C:\Users\ajcar\Desktop\searchAPI\obj\Debug\netcoreapp3.1\SearchEngine.dll
+C:\Users\ajcar\Desktop\searchAPI\obj\Debug\netcoreapp3.1\SearchEngine.pdb
