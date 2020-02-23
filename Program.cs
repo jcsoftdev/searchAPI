@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 using System.Net.Http;
 using System.Web;
@@ -51,6 +52,29 @@ namespace Program
     {
         static void Main(string[] args)
         {
+            //string[] input;
+
+            List<string> words = new List<string>();
+            if (args.Length == 0)
+            {
+                Console.WriteLine("words to search");
+                Console.WriteLine("Press key 'X' and ENTER to end");
+                string word = "";
+                int cont = 1;
+                do
+                {
+                    if (word!="")
+                    {
+                        words.Add(word);
+                        cont ++;
+                    }
+                    Console.Write("word "+cont+"(X:end): ");
+                    word = Console.ReadLine();
+
+                } while (word != "X" && word != "x");
+
+                args = words.ToArray();
+            }
             long iBing = 0;
             long iGoogle = 0;
             string KEY = "AIzaSyAJuxgY1dQGQV45L1nIOoxLjJd7Cy-xA1M";
@@ -74,14 +98,21 @@ namespace Program
                 
             }
             Console.WriteLine("============================");
-            if (iBing>iGoogle)
+            if (args.Length > 0)
             {
-                Console.WriteLine("Bing winner");
-            }else if(iBing<iGoogle){
-                Console.WriteLine("Google winner");
-            }else{
-                Console.WriteLine("Obtubieron un empate");
+                if (iBing>iGoogle)
+                {
+                    Console.WriteLine("Bing winner");
+                }else if(iBing<iGoogle){
+                    Console.WriteLine("Google winner");
+                }else{
+                    Console.WriteLine("Both got a draw");
+                }
+            }else
+            {
+                Console.WriteLine("Nothing To do");
             }
+            
             Console.WriteLine("============================");
 
         }

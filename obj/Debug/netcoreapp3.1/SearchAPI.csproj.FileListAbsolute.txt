@@ -1,0 +1,13 @@
+C:\Users\ajcar\Desktop\searchAPI\bin\Debug\netcoreapp3.1\SearchAPI.exe
+C:\Users\ajcar\Desktop\searchAPI\bin\Debug\netcoreapp3.1\SearchAPI.deps.json
+C:\Users\ajcar\Desktop\searchAPI\bin\Debug\netcoreapp3.1\SearchAPI.runtimeconfig.json
+C:\Users\ajcar\Desktop\searchAPI\bin\Debug\netcoreapp3.1\SearchAPI.runtimeconfig.dev.json
+C:\Users\ajcar\Desktop\searchAPI\bin\Debug\netcoreapp3.1\SearchAPI.dll
+C:\Users\ajcar\Desktop\searchAPI\bin\Debug\netcoreapp3.1\SearchAPI.pdb
+C:\Users\ajcar\Desktop\searchAPI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\ajcar\Desktop\searchAPI\obj\Debug\netcoreapp3.1\SearchAPI.csprojAssemblyReference.cache
+C:\Users\ajcar\Desktop\searchAPI\obj\Debug\netcoreapp3.1\SearchAPI.AssemblyInfoInputs.cache
+C:\Users\ajcar\Desktop\searchAPI\obj\Debug\netcoreapp3.1\SearchAPI.AssemblyInfo.cs
+C:\Users\ajcar\Desktop\searchAPI\obj\Debug\netcoreapp3.1\SearchAPI.csproj.CopyComplete
+C:\Users\ajcar\Desktop\searchAPI\obj\Debug\netcoreapp3.1\SearchAPI.dll
+C:\Users\ajcar\Desktop\searchAPI\obj\Debug\netcoreapp3.1\SearchAPI.pdb
